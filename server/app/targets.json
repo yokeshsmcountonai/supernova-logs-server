@@ -1,0 +1,18 @@
+[
+  {
+    "targets": [
+      "100.65.137.88:9100"
+    ],
+    "labels": {
+      "group": "office-testing"
+    }
+  },
+  {
+    "targets": [
+      "100.83.174.4:9100"
+    ],
+    "labels": {
+      "group": "jayjay-supernova"
+    }
+  }
+]

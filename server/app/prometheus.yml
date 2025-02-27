@@ -1,0 +1,17 @@
+global:
+  scrape_interval: 10s
+  scrape_timeout: 10s
+
+scrape_configs:
+  - job_name: 'node_exporter'
+    file_sd_configs:
+      - files:
+        - /etc/prometheus/targets.json  # Directly inside /etc
+
+rule_files:
+  - /etc/prometheus/alert_rules.yml  # Directly inside /etc
+
+alerting:
+  alertmanagers:
+    - static_configs:
+      - targets: ['localhost:9093']  # Ensure this is the correct address for your Alertmanager
