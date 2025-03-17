@@ -1,6 +1,4 @@
-sudo docker build -t countaiadmin/supernova-logs-client-side:1.0.0
-sudo docker run -d --name supernova-logs-client --restart=always countaiadmin/supernova-logs-client-side:1.0.0
+sudo docker build -t countaiadmin/supernova-logs-server:1.0.0 .
+sudo docker run -d --privileged  --network=host --name supernova-logs-server --restart=always countaiadmin/supernova-logs-server:1.0.0
 
 
-sudo docker push  -t countaiadmin/supernova-logs-server:1.0.0 
-sudo docker run -d --name supernova-logs-server --restart=always countaiadmin/supernova-logs-server:1.0.0

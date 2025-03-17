@@ -4,7 +4,7 @@ from typing import List, Dict, Optional
 
 
 class Execute:
-    def __init__(self, database: str = "central_database"):
+    def __init__(self, database: str = "supernova_central"):
         self.keepalive_kwargs = {
             "keepalives": 1,
             "keepalives_idle": 30,
